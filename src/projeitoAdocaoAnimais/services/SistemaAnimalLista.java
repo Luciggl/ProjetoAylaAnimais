@@ -1,4 +1,4 @@
-package projeitoAdocaoAnimais.utils;
+package projeitoAdocaoAnimais.services;
 
 import projeitoAdocaoAnimais.SistemaAnimal;
 import projeitoAdocaoAnimais.entities.Animal;
@@ -6,7 +6,6 @@ import projeitoAdocaoAnimais.exception.AnimalJaExisteException;
 import projeitoAdocaoAnimais.exception.AnimalNaoExisteException;
 
 import java.util.HashMap;
-import java.util.List;
 
 public class SistemaAnimalLista implements SistemaAnimal {
 
@@ -35,6 +34,6 @@ public class SistemaAnimalLista implements SistemaAnimal {
     public String toString() {
         return "SistemaAnimalLista{" +
                 "hashMap=" + hashMap +
-                '}';
+                '}'+"\n";
     }
 }
