@@ -3,13 +3,13 @@ package projeitoAdocaoAnimais.entities;
 public class Animal {
 
     private String nome;
-    private Integer idade;
+    private String idade;
     private String tipo;
 
     public Animal() {
     }
 
-    public Animal(String nome, int idade, String tipo) {
+    public Animal(String nome, String idade, String tipo) {
         this.nome = nome;
         this.idade = idade;
         this.tipo = tipo;
@@ -23,11 +23,11 @@ public class Animal {
         this.nome = nome;
     }
 
-    public int getIdade() {
+    public String getIdade() {
         return idade;
     }
 
-    public void setIdade(int idade) {
+    public void setIdade(String idade) {
         this.idade = idade;
     }
 
