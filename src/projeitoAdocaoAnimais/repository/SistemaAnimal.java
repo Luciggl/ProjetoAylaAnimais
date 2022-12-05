@@ -1,4 +1,4 @@
-package projeitoAdocaoAnimais;
+package projeitoAdocaoAnimais.repository;
 
 import projeitoAdocaoAnimais.entities.Animal;
 import projeitoAdocaoAnimais.exception.AnimalJaExisteException;

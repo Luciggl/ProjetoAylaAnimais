@@ -1,22 +1,18 @@
 package projeitoAdocaoAnimais.entities;
 
-import java.util.Objects;
-
 public class Animal {
 
     private String nome;
     private Integer idade;
     private String tipo;
-    private String cor;
 
     public Animal() {
     }
 
-    public Animal(String nome, int idade, String tipo, String cor) {
+    public Animal(String nome, int idade, String tipo) {
         this.nome = nome;
         this.idade = idade;
         this.tipo = tipo;
-        this.cor = cor;
     }
 
     public String getNome() {
@@ -43,21 +39,13 @@ public class Animal {
         this.tipo = tipo;
     }
 
-    public String getCor() {
-        return cor;
-    }
-
-    public void setCor(String cor) {
-        this.cor = cor;
-    }
 
     @Override
     public String toString() {
-        return "Animal{" +
+        return "Animal " +
                 "nome='" + nome + '\'' +
                 ", idade=" + idade +
                 ", tipo='" + tipo + '\'' +
-                ", cor='" + cor + '\'' +
-                '}';
+                ' ';
     }
 }

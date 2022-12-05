@@ -1,6 +1,6 @@
 package projeitoAdocaoAnimais.services;
 
-import projeitoAdocaoAnimais.SistemaAnimal;
+import projeitoAdocaoAnimais.repository.SistemaAnimal;
 import projeitoAdocaoAnimais.entities.Animal;
 import projeitoAdocaoAnimais.exception.AnimalJaExisteException;
 import projeitoAdocaoAnimais.exception.AnimalNaoExisteException;
