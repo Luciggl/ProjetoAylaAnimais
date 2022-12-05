@@ -3,23 +3,22 @@ package projeitoAdocaoAnimais;
 import projeitoAdocaoAnimais.entities.Animal;
 import projeitoAdocaoAnimais.exception.AnimalJaExisteException;
 import projeitoAdocaoAnimais.exception.AnimalNaoExisteException;
-import projeitoAdocaoAnimais.services.SistemaAnimalLista;
+import projeitoAdocaoAnimais.services.AnimalServices;
 
-import java.sql.SQLOutput;
 import java.util.List;
 import java.util.Scanner;
 
 public class Program {
     public static void main(String[] args) throws AnimalNaoExisteException {
         Scanner sc = new Scanner(System.in);
-        SistemaAnimalLista crud = new SistemaAnimalLista();
+        AnimalServices crud = new AnimalServices();
 
 
         boolean continuar = true;
         while (continuar) {
 
             System.out.print("==============================  Bem vindo ao SPAP!!  ===================================");
-            System.out.println("\nDigite uma opção:\n1.Cadastrar Animal\n2.Pesquisar Animal por Nome\n3.deletar\n4.Salvar\n5.Atualizar\n6.Sair");
+            System.out.println("\nDigite uma opção:\n1.Cadastrar Animal\n2.Pesquisar Animal por Nome\n3.deletar\n4.Salvar\n5.Atualizar\n6.TESTE DE DADOS\n7. persistir dados");
             System.out.print("========================================================================================\n");
             String opcao = sc.nextLine();
 
@@ -32,10 +31,11 @@ public class Program {
                 String tipo = sc.nextLine();
                 System.out.println("Digite a idade do Animal");
                 Integer idade = sc.nextInt();
+                String valueOfIdade = String.valueOf(idade);
                 sc.nextLine();
 
 
-                Animal entityAnimal1 = new Animal(nome, idade, tipo);
+                Animal entityAnimal1 = new Animal(nome, valueOfIdade, tipo);
 
 
                 try {
@@ -97,8 +97,9 @@ public class Program {
                  if (updateMenu.equals("1")) {
                     System.out.println("Digite a IDADE quer alterar");
                     Integer novaIdade = sc.nextInt();
+                    sc.nextLine();
 
-                    findedAnimal.setIdade(novaIdade);
+                    findedAnimal.setIdade(String.valueOf(novaIdade));
                     System.out.println("Idade alterado com sucesso");
                 } else if (updateMenu.equals("2")) {
                     System.out.println("Digite o TIPO quer alterar");
@@ -113,8 +114,19 @@ public class Program {
 
                 System.out.println("Operação feita com sucesso!");
             } else if (opcao.equals("6")){
-               //Sair
-                continuar = false;
+
+                String path = "D:\\temp\\ProjetoAylaAnimais\\dbAnimal\\dbAnimal.txt";
+                crud.recoverDB(path);
+
+                System.out.println("dados recuperados!");
+
+            } else if (opcao.equals("7")){
+
+                String path = "D:\\temp\\ProjetoAylaAnimais\\dbAnimal\\dbAnimal.txt";
+                crud.saveAllDB(path);
+
+                System.out.println("Dados pesistidos");
+
             } else {
                 System.out.println("Opção inválida. Tente novamente");
             }
