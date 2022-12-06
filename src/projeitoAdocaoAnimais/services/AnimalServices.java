@@ -12,18 +12,19 @@ import java.util.List;
 
 public class AnimalServices implements RepositoryAnimal {
 
-    public static HashMap<String, Animal> listGlobalCotroller = new HashMap<>();
+    public static HashMap<String, Animal> listAnimalControll = new HashMap<>();
 
     public static List<Animal> animalList = new ArrayList<>();
 
     @Override
     public Animal findByName(String keyNome) throws AnimalNaoExisteException {
-        return listGlobalCotroller.get(keyNome);
+        return listAnimalControll.get(keyNome);
     }
+
 
     @Override
     public void create(String keyNome, Animal EntityAnimal) throws AnimalJaExisteException, AnimalNaoExisteException {
-        listGlobalCotroller.put(keyNome, EntityAnimal);
+        listAnimalControll.put(keyNome, EntityAnimal);
 
         //sava na lista de animais
         animalList.add(EntityAnimal);
@@ -31,7 +32,7 @@ public class AnimalServices implements RepositoryAnimal {
 
     @Override
     public void delete(String keyNome) throws AnimalNaoExisteException {
-        listGlobalCotroller.remove(keyNome);
+        listAnimalControll.remove(keyNome);
         Animal animalFind = findByName(keyNome);
         animalList.remove(animalFind);
     }
@@ -76,7 +77,7 @@ public class AnimalServices implements RepositoryAnimal {
 
                 newReadList.add(buildAnimal);
                 animalList.add(buildAnimal);
-                listGlobalCotroller.put(nome,buildAnimal);
+                listAnimalControll.put(nome,buildAnimal);
 
                 line = br.readLine();
             }
@@ -85,18 +86,20 @@ public class AnimalServices implements RepositoryAnimal {
         }
 
         for (Animal readAll : newReadList) {
-            System.out.println(readAll);
+            System.out.println();
+            System.out.println("MSG: (System recoverDB-ok)");
+            System.out.println();
         }
     }
 
     public HashMap<String, Animal> getHashMap() {
-        return listGlobalCotroller;
+        return listAnimalControll;
     }
 
     @Override
     public String toString() {
         return "SistemaAnimalLista{" +
-                "hashMap=" + listGlobalCotroller +
+                "hashMap=" + listAnimalControll +
                 '}'+"\n";
     }
 

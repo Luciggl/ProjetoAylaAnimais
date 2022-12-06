@@ -94,11 +94,17 @@ public class Program {
 
             } else if (opcao.equals("5")) {
                 //atualizar
+                crud.recoverDB(path);
                 System.out.println("Digite o nome do animal que quer atualizar");
                 String nome = sc.nextLine();
 
                 Animal findedAnimal = crud.findByName(nome);
-
+                while (findedAnimal == null) {
+                    crud.recoverDB(path);
+                    System.out.println("animal não encontrado digite novamente! Digite novamente!");
+                    nome = sc.nextLine();
+                    findedAnimal = crud.findByName(nome);
+                }
 
 
                 System.out.println("\nDigite uma opção:\n1.idade \n2.tipo\n");
@@ -114,7 +120,7 @@ public class Program {
                 } else if (updateMenu.equals("2")) {
                     System.out.println("Digite o TIPO quer alterar");
                     String novaTipo = sc.nextLine();
-                    sc.nextLine();
+
 
                     findedAnimal.setTipo(novaTipo);
                     System.out.println("Tipo alterado com sucesso");
