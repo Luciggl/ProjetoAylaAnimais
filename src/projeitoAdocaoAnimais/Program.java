@@ -25,8 +25,8 @@ public class Program {
                     "3.deletar\n" +
                     "4.Listar\n" +
                     "5.Atualizar\n" +
-                    "6.persistir dados \n" +
-                    "7. persistir dados \n" +
+                    "6.Recuperar dados \n" +
+                    "7.Salvar na lista \n" +
                     "8.sair");
             System.out.print("========================================================================================\n");
             String opcao = sc.nextLine();
