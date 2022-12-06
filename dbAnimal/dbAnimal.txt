@@ -1,1 +1,2 @@
-pedro 1 gato 
+fred 2 cachorro 
+claudio 1 frango

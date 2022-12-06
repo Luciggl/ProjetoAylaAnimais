@@ -17,8 +17,17 @@ public class Program {
         boolean continuar = true;
         while (continuar) {
 
-            System.out.print("==============================  Bem vindo ao SPAP!!  ===================================");
-            System.out.println("\nDigite uma opção:\n1.Cadastrar Animal\n2.Pesquisar Animal por Nome\n3.deletar\n4.Salvar\n5.Atualizar\n6.persistir dados \n7. persistir dados");
+            System.out.print("==============================  Bem vindo ao SPAP!!  ===================================\n");
+            System.out.println(
+                    "Digite uma opção:\n" +
+                    "1.Cadastrar Animal\n" +
+                    "2.Pesquisar Animal por Nome\n" +
+                    "3.deletar\n" +
+                    "4.Listar\n" +
+                    "5.Atualizar\n" +
+                    "6.persistir dados \n" +
+                    "7. persistir dados \n" +
+                    "8.sair");
             System.out.print("========================================================================================\n");
             String opcao = sc.nextLine();
 
@@ -115,19 +124,22 @@ public class Program {
                 System.out.println("Operação feita com sucesso!");
             } else if (opcao.equals("6")){
 
-                String path = "D:\\temp\\ProjetoAylaAnimais\\dbAnimal\\dbAnimal.txt";
+                String path = "C:\\Users\\lucie\\OneDrive\\Área de Trabalho\\projetoAnimal\\ProjetoAylaAnimais\\dbAnimal\\dbAnimal.txt";
                 crud.recoverDB(path);
 
                 System.out.println("dados recuperados!");
 
             } else if (opcao.equals("7")){
 
-                String path = "D:\\temp\\ProjetoAylaAnimais\\dbAnimal\\dbAnimal.txt";
+                String path = "C:\\Users\\lucie\\OneDrive\\Área de Trabalho\\projetoAnimal\\ProjetoAylaAnimais\\dbAnimal\\dbAnimal.txt";
                 crud.saveAllDB(path);
 
                 System.out.println("Dados pesistidos");
 
-            } else {
+            }else if (opcao.equals("8")){
+                continuar = false;
+            }
+            else {
                 System.out.println("Opção inválida. Tente novamente");
             }
         }
