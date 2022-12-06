@@ -18,7 +18,7 @@ public class Program {
         while (continuar) {
 
             System.out.print("==============================  Bem vindo ao SPAP!!  ===================================");
-            System.out.println("\nDigite uma opção:\n1.Cadastrar Animal\n2.Pesquisar Animal por Nome\n3.deletar\n4.Salvar\n5.Atualizar\n6.TESTE DE DADOS\n7. persistir dados");
+            System.out.println("\nDigite uma opção:\n1.Cadastrar Animal\n2.Pesquisar Animal por Nome\n3.deletar\n4.Salvar\n5.Atualizar\n6.persistir dados \n7. persistir dados");
             System.out.print("========================================================================================\n");
             String opcao = sc.nextLine();
 
@@ -76,11 +76,11 @@ public class Program {
 
                 System.out.println();
             } else if (opcao.equals("4")) {
-                //salvar
+                //Lista
                 System.out.println("Lista completa de animais");
                 System.out.println(List.of(crud));
                 System.out.println();
-                System.out.println("Dados salvos com salvo com sucesso");
+                System.out.println("Dados listados com sucesso");
 
             } else if (opcao.equals("5")) {
                 //atualizar

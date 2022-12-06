@@ -32,6 +32,8 @@ public class AnimalServices implements RepositoryAnimal {
     @Override
     public void delete(String keyNome) throws AnimalNaoExisteException {
         listGlobalCotroller.remove(keyNome);
+        Animal animalFind = findByName(keyNome);
+        animalList.remove(animalFind);
     }
 
     //Recovers for date
@@ -96,10 +98,5 @@ public class AnimalServices implements RepositoryAnimal {
                 '}'+"\n";
     }
 
-    public static void main(String[] args) {
-
-
-
-    }
 
 }

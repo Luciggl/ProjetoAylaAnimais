@@ -5,8 +5,6 @@ import projeitoAdocaoAnimais.exception.AnimalJaExisteException;
 import projeitoAdocaoAnimais.exception.AnimalListException;
 import projeitoAdocaoAnimais.exception.AnimalNaoExisteException;
 
-import java.util.List;
-
 public interface RepositoryAnimal {
 
     Animal findByName(String nome) throws AnimalNaoExisteException;
