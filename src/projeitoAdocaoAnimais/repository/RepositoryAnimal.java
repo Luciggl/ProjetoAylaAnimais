@@ -14,11 +14,11 @@ public interface RepositoryAnimal {
     void delete(String keyNome) throws AnimalNaoExisteException;
 
 
-     default void saveAllDB(String path) throws AnimalListException {
+    default void saveAllDB(String path) throws AnimalListException {
 
     }
 
-     default void recoverDB(String path) throws AnimalListException{
+    default void recoverDB(String path) throws AnimalListException{
 
     }
 

@@ -13,7 +13,7 @@ public class Program {
         Scanner sc = new Scanner(System.in);
         AnimalServices crud = new AnimalServices();
         //caminho de salvar os dados
-        String path = "D:\\temp\\ProjetoAylaAnimais\\dbAnimal\\dbAnimal.txt";
+        String path = "C:\\Users\\lucie\\OneDrive\\Área de Trabalho\\projetoAnimal\\ProjetoAylaAnimais\\dbAnimal\\dbAnimal.txt";
 
         boolean continuar = true;
         while (continuar) {
@@ -21,14 +21,14 @@ public class Program {
             System.out.print("==============================  Bem vindo ao SPAP!!  ===================================\n");
             System.out.println(
                     "Digite uma opção:\n" +
-                    "1.Cadastrar Animal\n" +
-                    "2.Pesquisar Animal por Nome\n" +
-                    "3.deletar\n" +
-                    "4.Listar\n" +
-                    "5.Atualizar\n" +
-                    "6.Recuperar dados \n" +
-                    "7.Salvar na lista \n" +
-                    "8.sair");
+                            "1.Cadastrar Animal\n" +
+                            "2.Pesquisar Animal por Nome\n" +
+                            "3.deletar\n" +
+                            "4.Listar\n" +
+                            "5.Atualizar\n" +
+                            "6.Recuperar dados \n" +
+                            "7.Salvar na lista \n" +
+                            "8.sair");
             System.out.print("========================================================================================\n");
             String opcao = sc.nextLine();
 
@@ -110,7 +110,7 @@ public class Program {
                 System.out.println("\nDigite uma opção:\n1.idade \n2.tipo\n");
                 String updateMenu = sc.nextLine();
 
-                 if (updateMenu.equals("1")) {
+                if (updateMenu.equals("1")) {
                     System.out.println("Digite a IDADE quer alterar");
                     Integer novaIdade = sc.nextInt();
                     sc.nextLine();
