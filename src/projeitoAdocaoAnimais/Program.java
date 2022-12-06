@@ -124,14 +124,14 @@ public class Program {
                 System.out.println("Operação feita com sucesso!");
             } else if (opcao.equals("6")){
 
-                String path = "C:\\Users\\lucie\\OneDrive\\Área de Trabalho\\projetoAnimal\\ProjetoAylaAnimais\\dbAnimal\\dbAnimal.txt";
+                String path = "D:\\temp\\ProjetoAylaAnimais\\dbAnimal\\dbAnimal.txt";
                 crud.recoverDB(path);
 
                 System.out.println("dados recuperados!");
 
             } else if (opcao.equals("7")){
 
-                String path = "C:\\Users\\lucie\\OneDrive\\Área de Trabalho\\projetoAnimal\\ProjetoAylaAnimais\\dbAnimal\\dbAnimal.txt";
+                String path = "D:\\temp\\ProjetoAylaAnimais\\dbAnimal\\dbAnimal.txt";
                 crud.saveAllDB(path);
 
                 System.out.println("Dados pesistidos");

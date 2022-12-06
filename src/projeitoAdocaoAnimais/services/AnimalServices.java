@@ -76,6 +76,9 @@ public class AnimalServices implements RepositoryAnimal {
                 Animal buildAnimal = new Animal(nome,idade,tipo);
 
                 newReadList.add(buildAnimal);
+                animalList.add(buildAnimal);
+                listGlobalCotroller.put(nome,buildAnimal);
+
                 line = br.readLine();
             }
         } catch (IOException e) {
