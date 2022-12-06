@@ -12,7 +12,8 @@ public class Program {
     public static void main(String[] args) throws AnimalNaoExisteException {
         Scanner sc = new Scanner(System.in);
         AnimalServices crud = new AnimalServices();
-
+        //caminho de salvar os dados
+        String path = "D:\\temp\\ProjetoAylaAnimais\\dbAnimal\\dbAnimal.txt";
 
         boolean continuar = true;
         while (continuar) {
@@ -124,14 +125,14 @@ public class Program {
                 System.out.println("Operação feita com sucesso!");
             } else if (opcao.equals("6")){
 
-                String path = "D:\\temp\\ProjetoAylaAnimais\\dbAnimal\\dbAnimal.txt";
+
                 crud.recoverDB(path);
 
                 System.out.println("dados recuperados!");
 
             } else if (opcao.equals("7")){
 
-                String path = "D:\\temp\\ProjetoAylaAnimais\\dbAnimal\\dbAnimal.txt";
+
                 crud.saveAllDB(path);
 
                 System.out.println("Dados pesistidos");

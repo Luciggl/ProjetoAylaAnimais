@@ -67,7 +67,6 @@ public class AnimalServices implements RepositoryAnimal {
             while (line != null) {
                 String[] animalSplit = line.split(" ");
 
-                System.out.println(animalSplit.length);
 
                 String nome = animalSplit[0];
                 String idade = animalSplit[1];
